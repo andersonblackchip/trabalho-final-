@@ -1,0 +1,128 @@
+:root{
+    --purple-300-:#8733ff;
+    --purple-200-:#8733ff;
+
+    --red-400-:#2aed13;
+    --red-300-:#c9fcc4;
+
+    --branco-:#fff;
+    --black-: #363642;
+    --azul-:#254bf0;
+    --amarelo-:#c9f025;
+    --azules-:#4dabff;
+  }
+
+    body{
+      font-size: fantasy ,sans-serif; 
+      margin: 0;
+      background-color: #4dabff
+      ;}
+      
+      
+    body  {
+      background-image: url(img/tenta.jpg);
+    background-size:cover;
+          -webkit-animation: slidein 100s;
+          animation: slidein 100s;
+  
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  
+          -webkit-animation-direction:infinite;
+          animation-direction: infinite
+          ;              
+  }
+  
+  @-webkit-keyframes slidein {
+  from {background-position: top; background-size:3000px; }
+  to {background-position: -100px 0x;background-size:3100px;}
+  }
+  
+  @keyframes slidein {
+  from {background-position: top;background-size:3000px; }
+  to {background-position: -100px 0px;background: size 3100px;}
+  
+  }
+
+  
+
+   
+    
+    .center
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+    
+ 
+
+    .menuprincipal{
+      display: flex;
+  
+      align-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      flex-direction: row;
+  }
+    
+
+
+
+    
+  /* Estilo padrão para os botões do menu */
+  .botaoprincipal{
+    padding: 10px;
+    background-color: #ababb9;
+    transition: background-color 0.3s;
+  }
+
+  /* Estilo quando o mouse está sobre o botão */
+  .menu-button:hover {
+    background-color: #cff36d;
+  }
+
+
+@media (max-width: 767px){
+.menuprincipal{flex-direction:
+ column;}}
+
+
+ body {
+  /* Defina a imagem de fundo e ajuste as propriedades conforme necessário */
+  background-image: url(img/tenta.jpg);
+  background-size: cover; /* Isso faz com que a imagem cubra toda a área do elemento pai */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center center; /* Centraliza a imagem */
+  /* Adicione outras propriedades de estilo conforme necessário */
+  padding: 150px; ;}
+
+  #nossos{
+    
+    margin-top: 0;
+    background-color:#fff;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--azules-)
+}
+  
+  #sobre{
+    
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black
+}
