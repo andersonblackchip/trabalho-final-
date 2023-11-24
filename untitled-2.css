@@ -1,0 +1,197 @@
+:root {
+  --purple-300: #8733ff;
+  --purple-200: #8733ff;
+  --red-400: #2aed13;
+  --red-300: #c9fcc4;
+  --branco: #fff;
+  --black: #363642;
+  --azul: #254bf0;
+  --amarelo: #c9f025;
+  --azules: #4dabff;
+  --gelo: #b3d6da;
+  --cinza: #8e8e91;
+  --sombra: #ffc107;
+}
+
+body {
+  font-family: fantasy, sans-serif;
+  margin: 0;
+  background-color: #eaeef1;
+  background-image: url('img/bacgrounds/arvore-lua-avermelhado.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px; /* Ajuste para melhor responsividade */
+}
+
+.menuprincipal {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Ajuste para melhor responsividade */
+}
+
+.botaoprincipal {
+  position: relative;
+  width: 100%; /* Ajuste para melhor responsividade */
+  max-width: 400px; /* Adição para limitar a largura máxima */
+  font-size: 1em;
+  color: var(--gelo);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+.botaoprincipal:hover {
+  transform: scale(1.1); /* Ajuste para melhor responsividade */
+  background-color: var(--branco);
+  color: var(--azules);
+}
+
+@media (max-width: 767px) {
+  .menuprincipal {
+    flex-direction: column;
+    padding: 10px; /* Ajuste para melhor responsividade */
+  }
+
+  .botaoprincipal {
+    width: 100%;
+    margin-top: 10px; /* Espaçamento entre os botões */
+  }
+}
+
+#nossos {
+  display: grid;
+  margin: 9px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: cornsilk;
+  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  word-wrap: break-word;
+  padding: 20px; /* Ajuste para melhor responsividade */
+}
+@keyframes zigzag {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(10px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(-10px) translateY(10px);
+  }
+  75% {
+    transform: translateX(10px) translateY(-10px);
+  }
+}
+
+h2 {
+  animation: zigzag 1s ease-in-out infinite; /* Ajuste a duração conforme necessário */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+h3 {
+  animation: shake 0.5s ease-in-out infinite; /* Ajuste a duração conforme necessário */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h4 {
+  animation: rotate 5s linear infinite; /* Rotação contínua */
+}
+
+h4:hover {
+  transform: rotate(360deg); /* Rotação ao passar o mouse */
+  transition: transform 1s ease; /* Adiciona uma transição suave ao efeito de rotação ao passar o mouse */
+}
+#nossos img {
+  max-width: 100%;
+  height: auto;
+}
+
+#sobre,
+#contatos {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 4px 3px 3px var(--sombra);
+  text-align: center;
+  word-wrap: break-word;
+  overflow-y: auto;
+  max-height: 80vh;
+  padding: 20px; /* Ajuste para melhor responsividade */
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+h1 {
+  animation: fadeIn 1s ease-out;
+}
+@media (max-width: 420px) {
+  #nossos img {
+    display: none; /* Oculta as imagens em resoluções menores que 420 pixels */
+  }
+}
+@media (max-width: 420px) {
+  .menuprincipal {
+    display: none; /* Oculta o menu em resoluções menores que 420 pixels */
+  }
+}
